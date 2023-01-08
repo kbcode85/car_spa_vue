@@ -8,7 +8,16 @@
 </template>
 
 <script>
+import BasicFunction from '@/mixins/basic_function'
+import { getTransitionRawChildren } from 'vue';
+
 export default {
+    props:['namebuton'],
+    mixins: [BasicFunction],
+
+    created() {
+        this.runInfomodal()
+    },
     methods: {
         closeModal() {
             return this.$emit('eCloseModal', false)

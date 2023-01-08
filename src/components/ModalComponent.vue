@@ -1,7 +1,12 @@
 <template>
     <section id="modal-layer" class="modal">
         <div class="wrapper">
-            <slot></slot>
+            <template v-if="loader">
+                Pobieranie
+            </template>
+            <template v-else="">
+                <slot></slot>
+            </template>
             <button class="btn" @click="closeModal">Zamknij</button>
         </div>
     </section>
@@ -9,7 +14,6 @@
 
 <script>
 import BasicFunction from '@/mixins/basic_function'
-import { getTransitionRawChildren } from 'vue';
 
 export default {
     props:['namebuton'],
@@ -17,6 +21,7 @@ export default {
 
     created() {
         this.runInfomodal()
+        this.getDataFromNasa()
     },
     methods: {
         closeModal() {

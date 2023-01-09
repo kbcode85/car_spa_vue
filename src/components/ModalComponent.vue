@@ -1,28 +1,24 @@
 <template>
     <section id="modal-layer" class="modal">
         <div class="wrapper">
-            <template v-if="loader">
-                Pobieranie
-            </template>
-            <template v-else="">
+            <div v-if="loader" id="id-loader"> </div>
                 <slot></slot>
-            </template>
-            <button class="btn" @click="closeModal">Zamknij</button>
+            <button class="btn" @click="closeModal">{{ namebutton }}</button>
         </div>
+
     </section>
 </template>
-
-<script>
-import BasicFunction from '@/mixins/basic_function'
-
+<script> 
+import BasicFunction from '@/mixins/basic_functions'
 export default {
-    props:['namebuton'],
-    mixins: [BasicFunction],
+    props:['namebutton'],
+    mixins:[BasicFunction],
 
     created() {
         this.runInfomodal()
         this.getDataFromNasa()
     },
+
     methods: {
         closeModal() {
             return this.$emit('eCloseModal', false)
@@ -30,8 +26,7 @@ export default {
     }
 }
 </script>
-
-<style lang="scss" scoped>
+<style scoped lang="scss">
 .modal {
     display: flex;
     justify-content: center;
@@ -41,16 +36,17 @@ export default {
     height: 100%;
     left: 0;
     top: 0;
-    background-color: rgba(82, 82, 82, 0.555);
+    background-color: rgba(144, 137, 137, 0.8);
+    
 
     .wrapper {
         background-color: white;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        width: 600px;
-        height: 600px;
+        justify-content: center;
+        width: 300px;
+        height: 300px;
         border-radius: 15px;
 
         .btn {
@@ -60,12 +56,11 @@ export default {
             text-align: center;
             border: unset;
             cursor: pointer;
-
+            
             &:hover {
-                background-color: rgb(180, 0, 0);
+                background-color: rgb(191, 6, 6);
             }
         }
     }
 }
-
 </style>

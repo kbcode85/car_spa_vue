@@ -1,17 +1,23 @@
-import axios from 'axios'
-
+import axios from 'axios';
 export default {
+    data() {
+        loader: false
+    }, 
+
     methods: {
-        data() {
-            loader: false
-        },
         runInfomodal() {
             console.log('enable modal')
         },
+
         getDataFromNasa() {
-            this.loader = true
+            this.loader = true;
             axios.get('https://images-api.nasa.gov/search?q=sun')
-                .then(function (response) {
+                .then( (response) => {
+                    let imgUrl = response.data.collection.items[0].links[0].href
+                    let imgObj = document.createElement('img')
+                    imgObj.setAttribute('style', 'width: 100%')
+                    imgObj.setAttribute('src', imgUrl)
+                   document.getElementById('id-loader').appendChild(imgObj)
                     // handle success
                     console.log(response.data.collection.items[0].links[0].href);
                 })
@@ -19,10 +25,6 @@ export default {
                     // handle error
                     console.log(error);
                 })
-                .finally(function () {
-                    // always executed
-                });
-
         }
-    },
+    }
 }

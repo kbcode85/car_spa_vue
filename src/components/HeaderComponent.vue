@@ -19,7 +19,8 @@
             </div>
         </nav>
 
-        <ModalComponent v-if="showModal" @eCloseModal="toogleModal($event)">
+        <ModalComponent v-if="showModal" @eCloseModal="toogleModal($event)" :namebutton="'Zamknij'">
+            
             <ul class="">
                 <li class="">
                     <RouterLink to="/" class="">Witamy</RouterLink>
@@ -33,36 +34,16 @@
         </ModalComponent>
     </header>
 </template>
-
-<script>
-import ModalComponent from './ModalComponent.vue';
-export default {
-    components: {
-        ModalComponent
-    },
-    data() {
-        return {
-            showModal: false,
-        }
-    },
-    methods: {
-        toogleModal(parm) {
-            return this.showModal = parm
-        }
-    }
-}
-
-</script>
-
 <style lang="scss" scoped>
-@import "../assets/scss/variables";
+@import '@/assets/scss/variables';
+
 .nav {
     display: flex;
     background-color: rgb(239, 250, 250);
     position: relative;
     min-height: 30px;
     height: 100%;
-    border-bottom: 4px solid $green;
+    border-bottom: 4px solid rgba(8, 186, 20, 0.516);
 
     .logo {
         display: flex;
@@ -86,8 +67,11 @@ export default {
         &-item {
             padding: 0 5px;
             list-style-type: none;
-            border-right: 1px solid black;
 
+            &:not(:last-child) {
+                 border-right: 2px solid $green;
+            }
+           
             &__link {
                 text-decoration: none;
                 color: black;
@@ -114,7 +98,7 @@ export default {
             cursor: pointer;
 
             &:hover {
-                background-color: $green-h;
+                background-color: rgb(4, 73, 15);
             }
         }
 
@@ -128,3 +112,22 @@ export default {
     color: rgb(8, 186, 20);
 }
 </style>
+<script>
+import ModalComponent from './ModalComponent.vue';
+export default {
+    components: {
+        ModalComponent
+    },
+    data() {
+        return {
+            showModal: false,
+        }
+    },
+    methods: {
+        toogleModal(parm) {
+            return this.showModal = parm
+        }
+    }
+}
+
+</script>

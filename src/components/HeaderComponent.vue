@@ -2,17 +2,23 @@
     <header>
         <nav id="topnav" class="nav">
             <div class="logo">
+                <RouterLink to="/">
                 <img src="@/assets/logo.png" class="logo-img" alt="logo" title="Fit Pizza">
+                </RouterLink>
             </div>
             <ul class="nav-items">
                 <li class="nav-items-item">
-                    <RouterLink to="/" class="nav-items-item__link">Witamy</RouterLink>
+                    <RouterLink to="/cars" class="nav-items-item__link">Samochody</RouterLink>
                 </li>
-                <li class="nav-items-item">Menu</li>
                 <li class="nav-items-item">
-                    <RouterLink to="/about" class="nav-items-item__link">O nas</RouterLink>
+                    <RouterLink to="/vouchers" class="nav-items-item__link">Vouchery</RouterLink>
                 </li>
-                <li class="nav-items-item">Kontakt</li>
+                <li class="nav-items-item">
+                    <RouterLink to="/coop" class="nav-items-item__link">Współpraca</RouterLink>
+                </li>
+                <li class="nav-items-item">
+                    <RouterLink to="/contact" class="nav-items-item__link">Kontakt</RouterLink>
+                </li>
             </ul>
             <div class="mobile-menu">
                 <button @click="toogleModal(true)">Pokaż menu</button>
@@ -41,9 +47,13 @@
     display: flex;
     background-color: rgb(239, 250, 250);
     position: relative;
-    min-height: 30px;
+    min-height: 80px;
     height: 100%;
-    border-bottom: 4px solid rgba(8, 186, 20, 0.516);
+    border-bottom: 4px solid black;
+
+    @media (max-width: 500px) { 
+        min-height: 50px;
+    }
 
     .logo {
         display: flex;
@@ -52,7 +62,8 @@
         width: 10%;
 
         &-img {
-            max-width: 50px;
+            width: 100%;
+            height: 100%;
         }
     }
 
@@ -69,7 +80,7 @@
             list-style-type: none;
 
             &:not(:last-child) {
-                 border-right: 2px solid $green;
+                 border-right: 2px solid black;
             }
            
             &__link {
@@ -90,8 +101,8 @@
         right: 0;
         
         button {
-            padding: 18px 25px;
-            background-color: $green;
+            padding: 16px 25px;
+            background-color: black;
             color: white;
             text-align: center;
             border: unset;

@@ -53,13 +53,18 @@
 
             <ul class="">
                 <li class="">
-                    <RouterLink to="/" class="">Witamy</RouterLink>
+                    <RouterLink to="/cars" class="">Samochody</RouterLink>
+                            
                 </li>
-                <li class="">Menu</li>
                 <li class="">
-                    <RouterLink to="/about" class="">O nas</RouterLink>
+                    <RouterLink to="/vouchers" class="">Vouchery</RouterLink>
                 </li>
-                <li class="">Kontakt</li>
+                <li class="">
+                    <RouterLink to="/coop" class="">Współpraca</RouterLink>
+                </li>
+                <li class="">
+                    <RouterLink to="/contact" class="">Kontakt</RouterLink>
+                </li>
             </ul>
         </ModalComponent>
     </header>

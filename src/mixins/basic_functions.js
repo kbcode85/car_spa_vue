@@ -15,7 +15,7 @@ export default {
                 .then( (response) => {
                     let imgUrl = response.data.collection.items[0].links[0].href
                     let imgObj = document.createElement('img')
-                    imgObj.setAttribute('style', 'width: 100%')
+                    imgObj.setAttribute('style', 'border-radius:20px')
                     imgObj.setAttribute('src', imgUrl)
                    document.getElementById('id-loader').appendChild(imgObj)
                     // handle success

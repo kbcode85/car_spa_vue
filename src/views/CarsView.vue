@@ -1,9 +1,13 @@
 <template>
-    <div class="cars">
-      <h1>This is an cars page</h1>
-    </div>
-  </template>
+  <div class="cars">
+    <h1>This is an cars page</h1>
+  </div>
+</template>
   
-  <style>
+<style>
   
-  </style>
+</style>
+
+<script>
+
+</script>

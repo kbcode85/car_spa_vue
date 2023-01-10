@@ -1,17 +1,16 @@
 <template>
-    <footer class="footer">
-        Made with <span style="color: #e25555;">&hearts;</span>
+    <footer class="fixed bottom-0 w-full p-4 md:px-4 md:py-4 bg-gray-900">
+        <span class="block text-center text-sm text-gray-500 sm:text-cente">
+            Made with <span style="color: #e25555;">&#9829;</span>
+        </span>
     </footer>
+
 </template>
 
+<script>
+
+</script>
 
 <style lang="scss" scoped>
-.footer {
-    height: 50px;
-    background-color: black;
-    color: white;
-    text-align: center;
-    bottom: 0;
 
-}
 </style>

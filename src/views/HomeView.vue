@@ -1,9 +1,12 @@
 <template>
-    <div class="home">
-      <h1>This is an home page</h1>
-    </div>
-  </template>
-  
-  <style>
-  
-  </style>
+  <div class="flex p-4 justify-center">
+    
+dsadgot 
+
+  </div>
+
+</template>
+
+<style>
+
+</style>

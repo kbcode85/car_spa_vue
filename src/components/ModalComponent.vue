@@ -57,7 +57,7 @@ export default {
             border: unset;
             cursor: pointer;
             
-            &:hover {
+            :hover {
                 background-color: rgb(191, 6, 6);
             }
         }

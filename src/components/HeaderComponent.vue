@@ -2,10 +2,13 @@
     <header>
         <nav class="bg-white px-2 py-2.5">
             <div class="container flex flex-wrap items-center justify-between mx-auto">
-                <a class="flex items-center">
-                    <img src="@/assets/logo.png" class="h-6 mr-3 sm:h-9" />
-                    <span class="self-center text-xl font-semibold whitespace-nowrap">CarsRent</span>
-                </a>
+                <RouterLink to="/" class="">
+                    <a class="flex items-center">
+                        <img src="@/assets/logo.png" class="h-6 mr-3 sm:h-9" />
+                        <span class="self-center text-xl font-semibold whitespace-nowrap">CarsRent</span>
+                    </a>
+                </RouterLink>
+
                 <div class="hidden w-full md:block md:w-auto">
                     <ul
                         class="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
@@ -28,7 +31,7 @@
                     </ul>
                 </div>
                 <div class="mobile-menu px-2 py-2.5 flex items-center">
-                <button @click="toogleModal(true)"><i class="ri-menu-line"></i></button>
+                    <button @click="toogleModal(true)"><i class="ri-menu-line"></i></button>
                 </div>
             </div>
         </nav>
@@ -54,7 +57,7 @@
             <ul class="">
                 <li class="">
                     <RouterLink to="/cars" class="">Samochody</RouterLink>
-                            
+
                 </li>
                 <li class="">
                     <RouterLink to="/vouchers" class="">Vouchery</RouterLink>

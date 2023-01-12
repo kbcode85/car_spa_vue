@@ -76,16 +76,21 @@
 @import '@/assets/scss/variables';
 
 
+@media screen and (max-width: 1500px) {
+    .active:before {
+        display: none;
+    }
+}
+
 .active:before {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   position: absolute;
-  transform: translate(-50%, -45%);
   font-size: 20px;
   content: "";
   animation: animate infinite 20s ease-in;
-  left: 50%;
-  top: 6%;
+  left: 47%;
+  top: 4%;
 }
 
 .header-bg {

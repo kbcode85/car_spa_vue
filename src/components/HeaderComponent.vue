@@ -12,7 +12,7 @@
                 <div class="hidden w-full md:block md:w-auto">
                     <ul
                         class="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
-                        <li class="nav-items-item">
+                        <li class="nav-items-item" @mouseover="hover = true" @mouseleave="hover = false" :class="{ active: hover }">
                             <RouterLink to="/cars" class="nav-items-item__link block py-2 pl-3 pr-4">Samochody
                             </RouterLink>
                         </li>
@@ -75,6 +75,19 @@
 <style lang="scss" scoped>
 @import '@/assets/scss/variables';
 
+
+.active:before {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  transform: translate(-50%, -45%);
+  font-size: 20px;
+  content: "";
+  animation: animate infinite 20s ease-in;
+  left: 50%;
+  top: 6%;
+}
+
 .header-bg {
     background-position: 50%;
     background-image: url('@/assets/bg.jpg');
@@ -104,6 +117,7 @@ export default {
     data() {
         return {
             showModal: false,
+            hover: false,
         }
     },
     methods: {

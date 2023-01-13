@@ -28,6 +28,10 @@
                             <RouterLink to="/contact" class="nav-items-item__link block py-2 pl-3 pr-4">Kontakt
                             </RouterLink>
                         </li>
+                        <li class="nav-items-item">
+                            <RouterLink to="/api" class="nav-items-item__link block py-2 pl-3 pr-4">API
+                            </RouterLink>
+                        </li>
                     </ul>
                 </div>
                 <div class="mobile-menu px-2 py-2.5 flex items-center">
@@ -63,6 +67,9 @@
                 </li>
                 <li class="">
                     <RouterLink to="/contact" class="">Kontakt</RouterLink>
+                </li>
+                <li class="">
+                    <RouterLink to="/api" class="">API</RouterLink>
                 </li>
             </ul>
 
@@ -106,14 +113,15 @@ export default {
                 '/cars' : 'Nasza kolekcja samochodów',
                 '/about' : 'O nas',
                 '/coop' : 'Współpraca',
-                '/contact' : 'Kontakt'
+                '/contact' : 'Kontakt',
+                '/api' : 'API (na potrzeby zaliczenia)'
             },
             headerBG: {
-                '/' : 'url("../public/img/bg.jpg")',
-                '/cars' : 'url("../public/img/bg2.jpg")',
-                '/about' : 'url("../public/img/bg3.jpg")',
-                '/coop' : 'url("../public/img/bg4.jpg")',
-                '/contact' : 'url("../public/img/bg5.jpg")',
+                '/' : 'url("../img/bg.jpg")',
+                '/cars' : 'url("../img/bg2.jpg")',
+                '/about' : 'url("../img/bg3.jpg")',
+                '/coop' : 'url("../img/bg4.jpg")',
+                '/contact' : 'url("../img/bg5.jpg")',
             }
         }
     },

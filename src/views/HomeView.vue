@@ -1,21 +1,8 @@
 <template>
-  <div class="flex p-4 justify-center">
-      
-    <NewCarCounter />
-
+  <div class="home">
+    <h1>home</h1>
   </div>
-
 </template>
-<script>
-import NewCarCounter from '@/components/NewCarCounter.vue';
-
-
-export default{
-  components: {
-    NewCarCounter
-}
-}
-</script>
 
 <style>
 

@@ -22,7 +22,7 @@ import axios from 'axios';
 export default {
     data() {
         return {
-            api: "https://pixabay.com/api/?key=32832840-24ad294b8fdbad0ebba717fe4&q=bmw+m3",
+            api: "https://pixabay.com/api/?key=32832840-24ad294b8fdbad0ebba717fe4&category=transportation&q=bmw+m3",
             images: null,
             loading: false,
         }

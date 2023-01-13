@@ -12,7 +12,7 @@
                 <div class="hidden w-full md:block md:w-auto">
                     <ul
                         class="flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0">
-                        <li class="nav-items-item">
+                        <li class="nav-items-item" @mouseover="hover = true" @mouseleave="hover = false" :class="{ active: hover }">
                             <RouterLink to="/cars" class="nav-items-item__link block py-2 pl-3 pr-4">Samochody
                             </RouterLink>
                         </li>
@@ -44,7 +44,7 @@
                     <div class="text-center text-white px-6 md:px-12">
                         <h1 class="text-2xl mt-0 mb-6">{{headerText[$route.path]}}</h1>
                     </div>
-                </div>ś
+                </div>
             </div>
         </div>
 
@@ -72,6 +72,26 @@
 </template>
 <style lang="scss" scoped>
 @import '@/assets/scss/variables';
+
+
+@media screen and (max-width: 1500px) {
+    .active:before {
+        display: none;
+    }
+}
+
+
+.active:before {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 20px;
+  content: "";
+  animation: animate infinite 20s ease-in;
+  left: 48%;
+  top: 4%;
+}
+
 
 .header-bg {
     background-position: 50%;

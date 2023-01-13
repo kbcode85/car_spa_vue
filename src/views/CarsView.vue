@@ -676,6 +676,3 @@
     <div class=""></div>
   </section>
 </template>
-
-<style lang="scss" scoped></style>
-<script></script>

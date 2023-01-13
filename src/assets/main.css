@@ -7,3 +7,51 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+@keyframes animate {
+  0% {
+    content: 'Hatchback';
+    color: black;
+  }
+  19% {
+    content: 'Hatchback';
+    color: white;
+  }
+  19.0001% {
+    content: 'Sedan';
+    color: black;
+  }
+  38.0001% {
+    content: 'Sedan';
+    color: white;
+  }
+  38.0002% {
+    content: 'Sports Car';
+    color: black;
+  }
+  57.0002% {
+    content: 'Sports Car';
+    color: white;
+  }
+  57.0003% {
+    content: 'Coupe';
+    color: black;
+  }
+  76.0003% {
+      content: 'Coupe';
+      color: white;
+  }
+  76.0004% {
+      content: 'Minivan';
+      color: black;
+  }
+  95.0004% {
+    content: 'Minivan';
+    color: white;
+  }
+  95.0005% {
+    content: '';
+  }
+}
+
+

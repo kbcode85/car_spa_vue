@@ -9,14 +9,14 @@
     </section>
 </template>
 <script> 
-import BasicFunction from '@/mixins/basic_functions'
+//import BasicFunction from '@/mixins/basic_functions'
 export default {
     props:['namebutton'],
-    mixins:[BasicFunction],
+    //mixins:[BasicFunction],
 
     created() {
-        this.runInfomodal()
-        this.getDataFromNasa()
+        //this.runInfomodal()
+        //this.getDataFromNasa()
     },
 
     methods: {
@@ -56,10 +56,6 @@ export default {
             text-align: center;
             border: unset;
             cursor: pointer;
-            
-            :hover {
-                background-color: rgb(191, 6, 6);
-            }
         }
     }
 }

@@ -17,7 +17,7 @@
                             </RouterLink>
                         </li>
                         <li class="nav-items-item">
-                            <RouterLink to="/vouchers" class="nav-items-item__link block py-2 pl-3 pr-4">Vouchery
+                            <RouterLink to="/about" class="nav-items-item__link block py-2 pl-3 pr-4">O nas
                             </RouterLink>
                         </li>
                         <li class="nav-items-item">
@@ -37,18 +37,14 @@
         </nav>
 
 
-        <div class="header-bg relative overflow-hidden bg-no-repeat bg-cover">
+        <div class="header-bg relative overflow-hidden bg-no-repeat bg-cover" :style="{ backgroundImage: headerBG[$route.path]}">
             <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"
                 style="background-color: rgba(0, 0, 0, 0.75)">
                 <div class="flex justify-center items-center h-full">
                     <div class="text-center text-white px-6 md:px-12">
-                        <h1 class="text-2xl mt-0 mb-6">Wypożyczalnia samochodów sportowych i luksusowych</h1>
-                        <button type="button"
-                            class="inline-block px-4 py-2 border-2 border-white text-white font-medium text-xs leading-tight uppercase rounded">
-                            O nas
-                        </button>
+                        <h1 class="text-2xl mt-0 mb-6">{{headerText[$route.path]}}</h1>
                     </div>
-                </div>
+                </div>ś
             </div>
         </div>
 
@@ -60,7 +56,7 @@
 
                 </li>
                 <li class="">
-                    <RouterLink to="/vouchers" class="">Vouchery</RouterLink>
+                    <RouterLink to="/about" class="">O nas</RouterLink>
                 </li>
                 <li class="">
                     <RouterLink to="/coop" class="">Współpraca</RouterLink>
@@ -69,6 +65,8 @@
                     <RouterLink to="/contact" class="">Kontakt</RouterLink>
                 </li>
             </ul>
+
+
         </ModalComponent>
     </header>
 </template>
@@ -77,7 +75,6 @@
 
 .header-bg {
     background-position: 50%;
-    background-image: url('@/assets/bg.jpg');
     height: 350px;
 }
 
@@ -104,6 +101,20 @@ export default {
     data() {
         return {
             showModal: false,
+            headerText: {
+                '/' : 'Wypożyczalnia samochodów sportowych i luksusowych',
+                '/cars' : 'Nasza kolekcja samochodów',
+                '/about' : 'O nas',
+                '/coop' : 'Współpraca',
+                '/contact' : 'Kontakt'
+            },
+            headerBG: {
+                '/' : 'url("../public/img/bg.jpg")',
+                '/cars' : 'url("../public/img/bg2.jpg")',
+                '/about' : 'url("../public/img/bg3.jpg")',
+                '/coop' : 'url("../public/img/bg4.jpg")',
+                '/contact' : 'url("../public/img/bg5.jpg")',
+            }
         }
     },
     methods: {

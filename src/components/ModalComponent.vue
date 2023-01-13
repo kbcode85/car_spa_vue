@@ -37,6 +37,7 @@ export default {
     left: 0;
     top: 0;
     background-color: rgba(144, 137, 137, 0.8);
+    z-index: +1;
     
 
     .wrapper {
@@ -48,6 +49,7 @@ export default {
         width: 300px;
         height: 300px;
         border-radius: 15px;
+        z-index: +1;
 
         .btn {
             padding: 10px 25px;

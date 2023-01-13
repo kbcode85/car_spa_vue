@@ -8,7 +8,6 @@
       <label>Wiadomość</label>
       <textarea name="message" v-model="message" cols="30" rows="5" placeholder="Wiadomość">
           </textarea>
-
       <input type="submit" value="Wyślij">
     </form>
   </div>

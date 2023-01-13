@@ -1,5 +1,5 @@
 <template>
-  <div class="container justify-center flex flex-wrap mx-auto p-10">
+  <div class="container justify-center flex flex-wrap mx-auto p-20">
     <form>
       <label>Imię i nazwisko</label>
       <input type="text" v-model="name" name="name" placeholder="Twoje imię i nazwisko" class="">

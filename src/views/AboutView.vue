@@ -13,8 +13,8 @@
   <div class="button">
     <button id="click-me" onclick="window.location.reload();">Więcej informacji o nas znajdziecie tutaj</button>
   </div>
-  <img id="chevrolet" src="src\assets\Chevrolet.jpg" title="Chevrolet Camaro ZL1 2021">
-  <img id="AudiAbout" src="src\assets\AudiAbout.png" title="Audi R8 2008"> 
+  <img id="chevrolet" src="../assets/Chevrolet.jpg" title="Chevrolet Camaro ZL1 2021">
+  <img id="AudiAbout" src="../assets/AudiAbout.png" title="Audi R8 2008"> 
 </template>
 
 <script>
